@@ -1,0 +1,43 @@
+[NAME]
+gmclient \- send commands and data to the GantMagic daemon
+
+[ENVIRONMENT]
+
+.TP
+\fBHOME\fR
+The user's home folder. Used to search for configuration file if not specified.
+
+[FILES]
+
+.TP
+\fB.gantmagicrc\fR or \fBgantmagic.rc\fR
+gmd searches for a config file named .gantmagicrc or gantmagic.rc in the current path, the user's home path as specified by the HOME environment variable or /etc/. At a minimum the file must contain:
+
+_global:
+  authKey: ********
+
+(the user should specify their own auth key and set file permissions accordingly). An alternative config file location may be specified using the -c, --config FILE option.
+
+[EXAMPLES]
+.TP
+Load a project:
+gmclient add yourproject.tjp
+.PP
+.TP
+List available reports for a project:
+gmclient list-reports <project_id>
+.PP
+.TP
+Generate a report:
+gmclient report <project_id> <report_id>
+.PP
+.TP
+Terminate a running instance of the server:
+gmclient terminate
+
+
+
+[SEE ALSO]
+tj3d(1)
+
+The full TaskJuggler manual is available online at http://www.taskjuggler.org/tj3/manual/, or via the tj3man command.

@@ -1,0 +1,37 @@
+[NAME]
+gmts_sender \- send out time sheets templates via email
+
+[ENVIRONMENT]
+
+.TP
+\fBHOME\fR
+The user's home folder. Used to search for configuration file if not specified.
+
+[FILES]
+
+\fB.gantmagicrc\fR or \fBgantmagic.rc\fR
+gmd searches for a config file named .gantmagicrc or gantmagic.rc in the current path, the user's home path as specified by the HOME environment variable or /etc/. At a minimum the file must configure an authentication key, an e-mail delivery method and sender e-mail e.g.:
+
+_global:
+   authKey: ********
+   smtpServer: smtp.your_company.com
+   projectId: acso
+.br
+_timesheets:
+   senderEmail: 'GantMagic <statussheets@your_company.com>'
+
+(the user should specify their own auth key and set file permissions accordingly). An alternative config file location may be specified using the -c, --config FILE option.
+
+.TP
+\fBtimesheets.log\fR
+The timesheets log file, created in the working directory.
+
+.TP
+\fBTimeSheetTemplates\fR
+Base directory of the sheet templates, created in the working directory.
+
+
+[SEE ALSO]
+gmts_receiver(1)
+
+The full GantMagic manual is available online at https://example.com/gantmagic/manual/, or via the gmman command.

@@ -1,0 +1,25 @@
+[NAME]
+gm \- schedules GantMagic projects and generates reports
+
+[ENVIRONMENT]
+
+.TP
+\fBGANTMAGIC_DATA_PATH\fR
+Override the path to the GantMagic data folder.
+The data folder contains the css, icons and scripts
+for GantMagic reports.
+
+.TP
+\fBTZ\fR
+The POSIX Time Zone environment variable.
+
+Any environment variable may be used in a GantMagic file using the expression $(VAR_NAME).
+
+[EXAMPLES]
+
+gm tutorial.tjp
+
+[SEE ALSO]
+gmclient(1), gmd(1), gmman(1), gmss_receiver(1), gmss_sender(1), gmts_receiver(1), gmts_sender(1), gmts_summary(1), gmwebd(1)
+
+The full GantMagic manual is available online at https://example.com/gantmagic/manual/, or via the gmman command.

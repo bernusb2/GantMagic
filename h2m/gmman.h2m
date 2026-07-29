@@ -1,0 +1,22 @@
+[NAME]
+gmman \- get documentation for GantMagic keywords or generate user manual
+
+[ENVIRONMENT]
+
+.TP
+\fBBROWSER\fR
+The web browser used to display the user manual as HTML.
+
+[EXAMPLES]
+
+gmman shift
+.br
+gmman --html shift.timesheet
+.br
+gmman --html
+
+[SEE ALSO]
+
+gm(1)
+
+The GantMagic manual is also available online at https://example.com/gantmagic/manual/.

@@ -1,0 +1,6 @@
+Unit Tests: 
+ruby -Ilib -I. test/all.rb
+
+RSpec Suite:
+rspec -Ilib -Ispec spec/
+

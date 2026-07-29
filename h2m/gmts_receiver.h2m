@@ -1,0 +1,41 @@
+[NAME]
+gmts_receiver \- receive filled-out time sheets via email
+
+[ENVIRONMENT]
+
+.TP
+\fBHOME\fR
+The user's home folder. Used to search for configuration file if not specified.
+
+
+[FILES]
+.TP
+\fB.gantmagicrc\fR or \fBgantmagic.rc\fR
+gmd searches for a config file named .gantmagicrc or gantmagic.rc in the current path, the user's home path as specified by the HOME environment variable or /etc/. At a minimum the file must configure an authentication key, an e-mail delivery method and sender e-mail e.g.:
+
+_global:
+   authKey: ********
+   smtpServer: smtp.your_company.com
+_timesheets:
+   senderEmail: 'GantMagic <timesheets@your_company.com>'
+
+(the user should specify their own auth key and set file permissions accordingly). An alternative config file location may be specified using the -c, --config FILE option.
+
+.TP
+\fBtimesheets.log\fR
+The statussheets log file, created in the working directory.
+
+.TP
+\fBTimeSheets/FailedMails/\fR
+Directory created in the working directory to store the failed emails.
+
+.TP
+\fBTimeSheets/FailedSheets/\fR
+Directory created in the working directory to store the failed status sheets.
+
+
+[SEE ALSO]
+
+gmts_sender(1)
+
+The full TaskJuggler manual is available online at http://www.taskjuggler.org/tj3/manual/, or via the tj3man command.

@@ -1,0 +1,24 @@
+[NAME]
+gmwebd \- GantMagic reports web server
+
+[ENVIRONMENT]
+
+.TP
+\fBHOME\fR
+The user's home folder. Used to search for configuration file if not specified.
+
+[FILES]
+
+.TP
+\fB.gantmagicrc\fR or \fBgantmagic.rc\fR
+gmd searches for a config file named .gantmagicrc or gantmagic.rc in the current path, the user's home path as specified by the HOME environment variable or /etc/. At a minimum the file must contain:
+
+_global:
+  authKey: ********
+
+(the user should specify their own auth key and set file permissions accordingly). An alternative config file location may be specified using the -c, --config FILE option.
+
+[SEE ALSO]
+gmd(1)
+
+The full GantMagic manual is available online at https://example.com/gantmagic/manual/, or via the gmman command.
